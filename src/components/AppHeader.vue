@@ -1,10 +1,9 @@
 <template>
   <div class="app-header">
-    <img src="../assets/spotify_logo.jpg" alt="spotify logo">
+    <img src="../assets/spotify_logo.png" alt="spotify logo">
     <nav>
-      <a v-for="item in navItems">{{item.name}}</a>
+      <a class="link" v-for="{url, name, index} in navItems" :href="url" key="name">{{name}}</a>
     </nav>
-    <a></a>
   </div>
 </template>
 
@@ -42,13 +41,16 @@
 <style>
 
   div img {
-    width: 200px;
+    height: 110px;
+    cursor: pointer;
   }
 
   .app-header {
     background: black;
     display: flex;
     justify-content: space-around;
+    height: 80px;
+    align-items: center;
   }
 
   nav {
@@ -57,7 +59,14 @@
     align-items: center;
   }
 
-  a {
-    padding-right: 20px;
+  .link {
+    padding-right: 35px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .link:hover {
+    color: greenyellow;
   }
 </style>

@@ -1,8 +1,6 @@
 <template>
   <div id="app">
     <AppHeader />
-    <img alt="Vue logo" src="./assets/logo.png">
-    <h1>Hello</h1>
 
   </div>
 </template>
