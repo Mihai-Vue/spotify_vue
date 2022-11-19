@@ -2,7 +2,12 @@
   <div class="app-header">
     <img src="../assets/spotify_logo.png" alt="spotify logo">
     <nav>
-      <a class="link" v-for="{url, name, index} in navItems" :href="url" key="name">{{name}}</a>
+      <a class="link" v-for="({route, name}, index) in navItems"
+         :href="route"
+         key="name">
+        {{name}}
+        <span v-if="index === 2">|</span>
+      </a>
     </nav>
   </div>
 </template>
@@ -14,23 +19,23 @@
         navItems: [
           {
             name: 'Premium',
-            url: '#'
+            route: '#'
           },
           {
             name: 'Support',
-            url: '#'
+            route: '#'
           },
           {
             name: 'Download',
-            url: '#'
+            route: '#'
           },
           {
             name: 'Sign up',
-            url: '#'
+            route: '#'
           },
           {
             name: 'Log in',
-            url: '#'
+            route: '#'
           }
         ]
       }
@@ -68,5 +73,9 @@
 
   .link:hover {
     color: greenyellow;
+  }
+
+  span {
+    margin-left: 30px;
   }
 </style>
