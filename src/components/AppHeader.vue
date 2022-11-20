@@ -1,19 +1,21 @@
 <template>
   <div class="app-header">
-    <img src="../assets/spotify_logo.png" alt="spotify logo">
-    <nav>
-      <a class="link" v-for="({route, name}, index) in navItems"
-         :href="route"
-         key="name">
-        {{name}}
-        <span v-if="index === 2">|</span>
-      </a>
+    <img class="header-logo" src="../assets/spotify_logo.png" alt="spotify logo">
+    <nav class="app-header-nav">
+      <div class="nav-header" v-for="({route, name}, index) in navItems"
+           :key="name">
+        <a class="header-a" :href="route">
+          {{name}}
+        </a>
+        <span id="pipe" v-if="index === 2">|</span>
+      </div>
     </nav>
   </div>
 </template>
 
 <script>
   export default {
+    name: "AppHeader.vue",
     data(){
       return {
         navItems: [
@@ -22,19 +24,19 @@
             route: '#'
           },
           {
-            name: 'Support',
+            name: 'Asistenta',
             route: '#'
           },
           {
-            name: 'Download',
+            name: 'Descarca',
             route: '#'
           },
           {
-            name: 'Sign up',
+            name: 'Inregistreaza-te',
             route: '#'
           },
           {
-            name: 'Log in',
+            name: 'Conecteaza-te',
             route: '#'
           }
         ]
@@ -45,7 +47,7 @@
 
 <style>
 
-  div img {
+  .header-logo {
     height: 110px;
     cursor: pointer;
   }
@@ -56,26 +58,38 @@
     justify-content: space-around;
     height: 80px;
     align-items: center;
+    padding: 0 160px;
   }
 
-  nav {
-    color: white;
+  .app-header-nav {
+    color: black;
     display: flex;
     align-items: center;
+    gap: 30px;
   }
 
-  .link {
-    padding-right: 35px;
+  .nav-header {
+   height: 8px;
+  }
+
+  .header-a {
     text-decoration: none;
     color: white;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 5px;
+  }
+
+  .header-a:hover {
+    color: greenyellow;
     cursor: pointer;
   }
 
-  .link:hover {
-    color: greenyellow;
-  }
-
-  span {
-    margin-left: 30px;
+  #pipe {
+    color: white;
+    padding-left: 30px;
+    font-size: 18px;
+    font-weight: bold;
   }
 </style>

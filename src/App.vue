@@ -2,7 +2,6 @@
   <div id="app">
     <AppHeader />
     <AppFooter />
-
   </div>
 </template>
 
@@ -10,12 +9,11 @@
 import AppHeader from "@/components/AppHeader";
 import AppFooter from "@/components/AppFooter";
 
-
 export default {
   name: 'App',
   components: {
       AppHeader,
-      AppFooter
+      AppFooter,
   }
 }
 </script>
