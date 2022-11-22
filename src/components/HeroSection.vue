@@ -5,7 +5,6 @@
       <h2>Doar 4.99 EUR/lună după. Anulezi oricând.</h2>
       <button class="btn-1 buttons">SA INCEPEM</button>
       <button class="btn-2 buttons">VEZI ABONAMENTE</button>
-
       <p>
         <a class="a-hero">Se aplică Termeni și condiții.
         </a> Luna gratuită nu este disponibilă utilizatorilor care au încercat deja versiunea Premium.
