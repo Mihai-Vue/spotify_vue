@@ -1,16 +1,18 @@
 <template>
-  <div class="app-header">
-    <img class="header-logo" src="../assets/spotify_logo.png" alt="spotify logo">
-    <nav class="app-header-nav">
-      <div class="nav-header" v-for="({route, name}, index) in navItems"
-           :key="name">
-        <a class="header-a" :href="route">
-          {{name}}
-        </a>
-        <span id="pipe" v-if="index === 2">|</span>
-      </div>
-    </nav>
+  <header class="app-header">
+    <div class="header-wrapper">
+      <img class="header-logo" src="../assets/spotify_logo.png" alt="spotify logo">
+      <nav class="app-header-nav">
+        <div class="nav-header" v-for="({route, name}, index) in navItems"
+             :key="name">
+          <a class="header-a" :href="route">
+            {{name}}
+          </a>
+          <span id="pipe" v-if="index === 2">|</span>
+        </div>
+      </nav>
   </div>
+  </header>
 </template>
 
 <script>
@@ -47,18 +49,25 @@
 
 <style>
 
+  .app-header {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    height: 80px;
+    width: 1147px;
+    margin: 0 367px;
+  }
+
   .header-logo {
     height: 110px;
     cursor: pointer;
-  }
-
-  .app-header {
-    background: black;
-    display: flex;
-    justify-content: space-around;
-    height: 80px;
-    align-items: center;
-    padding: 0 160px;
   }
 
   .app-header-nav {

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <AppHeader />
+    <HeroSection />
     <AppFooter />
   </div>
 </template>
@@ -8,12 +9,14 @@
 <script>
 import AppHeader from "@/components/AppHeader";
 import AppFooter from "@/components/AppFooter";
+import HeroSection from "@/components/HeroSection"
 
 export default {
   name: 'App',
   components: {
-      AppHeader,
-      AppFooter,
+    AppHeader,
+    HeroSection,
+    AppFooter,
   }
 }
 </script>
@@ -30,7 +33,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
+  }
 </style>
 
 
