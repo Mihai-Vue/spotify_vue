@@ -1,14 +1,15 @@
 <template>
   <section class="feature-section">
     <div class="feature-wrapper">
-      <h2>De ce să treci la Premium?</h2>
+      <h2 id="feature-title">De ce să treci la Premium?</h2>
       <ul>
-        <li v-for="{image, logo, featureOne, featureTwo} in featureList"
+        <li class="feature-list"
+            v-for="{image, logo, featureOne, featureTwo} in featureList"
             :key="featureTwo"
             >
-          <img :src= "image" :alt="logo">
-          <p>{{featureOne}}</p>
-          <p>{{featureTwo}}</p>
+          <img class="feature-logo" :src= "image" :alt="logo">
+          <p id="feature-one">{{featureOne}}</p>
+          <p id="feature-two">{{featureTwo}}</p>
         </li>
       </ul>
     </div>
@@ -18,7 +19,7 @@
 <script>
 export default {
   name: "FeaturesSection.vue",
-  data(){
+  data:() => {
     return {
       featureList: [
         {
@@ -65,8 +66,35 @@ export default {
     margin: 0 auto;
   }
 
+  #feature-title{
+    font-size: 35px;
+    font-weight: bold !important;
+    color: black;
+  }
+
   .feature-wrapper ul {
     display: flex;
+    justify-content:space-between;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .feature-logo {
+    height: 150px;
+    width: 150px;
+  }
+
+  #feature-one {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  #feature-two {
+    font-size: 16px;
   }
 
 </style>

@@ -3,6 +3,7 @@
     <AppHeader />
     <HeroSection />
     <FeaturesSection />
+    <SubscriptionSection />
     <AppFooter />
   </div>
 </template>
@@ -12,6 +13,7 @@ import AppHeader from "@/components/AppHeader";
 import AppFooter from "@/components/AppFooter";
 import HeroSection from "@/components/HeroSection"
 import FeaturesSection from "@/components/FeaturesSection";
+import SubscriptionSection from "@/components/SubscriptionSection"
 
 export default {
   name: 'App',
@@ -19,6 +21,7 @@ export default {
     AppHeader,
     HeroSection,
     FeaturesSection,
+    SubscriptionSection,
     AppFooter,
   }
 }

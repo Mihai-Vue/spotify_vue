@@ -16,7 +16,6 @@
 <script>
 export default {
   name: "HeroSection.vue",
-
 }
 </script>
 
@@ -36,7 +35,6 @@ export default {
   }
 
   .content-wrapper h1 {
-    .color: white;
     font-size: 40px;
     font-weight: bold;
     margin-top: 60px;

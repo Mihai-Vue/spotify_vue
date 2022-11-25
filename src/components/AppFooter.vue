@@ -46,7 +46,7 @@
 export default {
   name: "AppFooter.vue",
 
-  data(){
+  data: () => {
     return {
       footerNavItems: [
         {
@@ -228,9 +228,6 @@ export default {
     margin: 0 auto;
     text-align: end;
     cursor: pointer;
-  }
-
-  .footer-info {
   }
 
   .footer-ul {
